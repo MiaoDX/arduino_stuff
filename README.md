@@ -4,6 +4,10 @@ Lesson learned about Arduino
 
 The official Arduino IDE is not so good for developers, luckily, there are pretty nice tools out there -- [visualmicro](http://www.visualmicro.com/), see the document for more info, it's pretty nice.
 
+### Tips about visualmicro
+
+Use `{@ReportDigital}` action when debug to give a more easy way to show the status of digital pins.
+
 ## Boards
 
 ### RAMPS 1.4
