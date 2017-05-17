@@ -1,32 +1,44 @@
-Lesson learned about Arduino
+Some lesson learned and configuration stuff when programming the hardwares, such as `raspberry pi`, `arduino`, `steppers` and so on.
 
-## Environment
+I really think that intelligent hardware will have splendid prospect in the coming future. So, a little work on these is worthy.
 
-The official Arduino IDE is not so good for developers, luckily, there are pretty nice tools out there -- [visualmicro](http://www.visualmicro.com/), see the document for more info, it's pretty nice.
+And one of the most crucial part is the `communication`, let me give you two example:
 
-### Tips about visualmicro
 
-Use `{@ReportDigital}` action when debug to give a more easy way to show the status of digital pins.
+### Example#1.Communication Speed
 
-## Boards
+**IF** the speed of wireless communication latency between image sensor (camera) and the receiver (calculation machine) can be reduced to the latency of wire connection, great chances are that we **do not have to write embedded programs at all**! 
 
-### RAMPS 1.4
+We can always set up a PC or workstation and keep the robot with sensor not so far away from the PC, and receive sensor results send from the robot, let the PC do the necessary calculation, send back the command to the robot. In such scenario, we can really concentrate on the logical stuff when programming instead of pay so much attention to the limited resources the embedded hardware provided us and do lot of necessary low level trick. 
 
-* The enable pin means `enable` when `LOW`.
+### Example#2.Communication Protocol
 
-## Lesson learned
+>SIMPLICITY is beauty.
 
-### `long` values
+We do not need to and should not create and handwrite communication protocol each and every time we want to communicate between hardwares, no matter what the hardware is, it's a PC, a raspberry pi, an arduino, no matter what communication module we use, it's a serial, a wifi, a Xbee, there should be some level of abstraction we can make use of.
 
->If doing math with integers, at least one of the numbers must be followed by an L, forcing it to be a `long`.
--- [official document about long](https://www.arduino.cc/en/Reference/Long)
+Maybe it can be `RESTFUL` API, or some protocol framework. BUT, please, please, please do not handwrite all the the BYTES and do calculation on the BYTES for validation. -.-
 
-So, unlike ordinary C/Cpp, to declare a long type value, one can just type:
 
-`long l = 1000000000;`
+Examples end up here.
 
-in arduino, we must append `L` after the value, like `long l = 1000000000L;`, this is really annoying. So if we want to do a multiply operation, we should do something like:
+## What's the *approximate* ideal methods of hardware programming
 
-`long testLong = 2000 * long(32);`
+Well, I am sure *yet*! :)
 
-I really think it is a bug, even the document declared it. 
+But there are so many developments [here](https://github.com/fffaraz/awesome-cpp#robotics) and there.
+
+However,
+
+>Done is better than perfect.
+
+when we do hardware stuff, keep in mind that we want to do better (or even best), but **make the ~~fucking~~ stuff run**[^stuff_run] is what we need to guarantee!
+
+[^stuff_run]: It is a jock inside our lab, the original word is **RUN 起来** in Chinese, often said by us when we want to make a quick trial and error test.
+
+
+## What's next
+
+I will provide links if I really find out something interesting.
+
+>Good luck & have fun.
