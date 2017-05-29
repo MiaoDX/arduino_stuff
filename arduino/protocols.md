@@ -57,3 +57,7 @@ It dose seems promising, and can have a try on it.
 [uNetworking](https://github.com/uNetworking/), it seems amazing, for one person can really lead such a huge project:
 
 [uWebSockets](https://github.com/uNetworking/uWebSockets), [uTT](https://github.com/uNetworking/uTT) and [uSockets](https://github.com/uNetworking/uSockets).
+
+# frnetlib
+
+[frnetlib](https://github.com/Cloaked9000/frnetlib), it's small and neat and cross-platform.

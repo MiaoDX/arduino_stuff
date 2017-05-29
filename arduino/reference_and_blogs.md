@@ -15,3 +15,7 @@ Tinkering with electronics & ambient interaction.
 [http://thijs.elenbaas.net/](http://thijs.elenbaas.net/)
 
 * [interfacing-arduino-with-c-and-libserial](https://sglez.org/2008/08/05/interfacing-arduino-with-c-and-libserial/)
+
+* vichargrave
+
+[vichargrave](https://vichargrave.github.io), seems like a nice network worker. And his blog looks pretty.
