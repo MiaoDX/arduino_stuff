@@ -41,4 +41,8 @@ when we do hardware stuff, keep in mind that we want to do better (or even best)
 
 I will provide links if I really find out something interesting.
 
+* [protocols.md](protocols.md)
+* [reference_and_blogs.md](reference_and_blogs.md)
+
+
 >Good luck & have fun.
