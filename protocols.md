@@ -61,3 +61,14 @@ It dose seems promising, and can have a try on it.
 # frnetlib
 
 [frnetlib](https://github.com/Cloaked9000/frnetlib), it's small and neat and cross-platform.
+
+# CoAP
+
+[CoAP](http://coap.technology/), RFC 7252 Constrained Application Protocol
+
+> “The Constrained Application Protocol (CoAP) is a specialized web transfer protocol for use with constrained nodes and constrained networks in the Internet of Things. <br>
+The protocol is designed for machine-to-machine (M2M) applications such as smart energy and building automation.”
+
+I got this from [phodal](https://github.com/phodal) via his WeChat, it seems promising.
+
+And for Arduino, maybe [1248/microcoap](https://github.com/1248/microcoap) is okay to check. And for host, [zerom0/CoaPP](https://github.com/zerom0/CoaPP). I will try it when the WiFiShield are available.
