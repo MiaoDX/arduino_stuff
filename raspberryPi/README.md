@@ -1,5 +1,76 @@
 Raspberry stuff.
 
+## Installation
+
+[The official set up](https://www.raspberrypi.org/documentation/installation/installing-images/windows.md) is pretty good.
+
+[RaspberryPi 3的安装配置](https://robocoderhan.github.io/2016/12/13/Raspberry%20Pi%203%E7%9A%84%E5%AE%89%E8%A3%85%E8%AE%BE%E7%BD%AE/)
+
+It introduced a wonderful remote access tool for linux like system (MobaXterm), it can replace MTPUTTY with ease.
+
+
+## LOGIN via ssh
+
+The default behavior of raspberry system changes A LOT!
+
+> As of the November 2016 release, Raspbian has the SSH server disabled by default. It can be enabled manually from the desktop:
+
+``` vi
+* Enter sudo raspi-config in a terminal window
+* Select Interfacing Options
+* Navigate to and select SSH (it can varies, maybe in the `Interfacing Options`)
+* Choose Yes
+* Select Ok
+* Choose Finish
+```
+
+
+### [And login via root](https://raspberrypi.stackexchange.com/questions/48056/login-as-root-not-possible):
+
+``` vi
+* Login, and edit this file: sudo nano /etc/ssh/sshd_config
+* Find this line: PermitRootLogin without-password
+* Edit: PermitRootLogin yes
+* Close and save file
+* reboot or restart sshd service using: /etc/init.d/ssh restart
+* Set a root password if there isn't one already: sudo passwd root
+```
+
+## Some configuration for hardware
+
+
+
+## Static IP
+
+```
+# vi /etc/network/interfaces
+
+# this raspberry is for new generation number 1's platform
+# ip:130
+
+auto lo
+
+iface lo inet loopback
+iface eth0 inet dhcp
+
+auto wlan0
+iface wlan0 inet static
+address 192.168.0.130
+gateway 192.168.0.1
+netmask 255.255.255.0
+wpa-ssid pi2
+wpa-psk wenwubaohu
+# wpa-roam /etc/wpa_supplicant/wpa_supplicant.conf
+iface default inet dhcp
+
+```
+
+
+The newer version has some specific configuration, which are not so necessary, we can stick to our old knowledge as above.
+
+Newer one (2017), [https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md](https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md) to add wireless password and ssid.
+
+And [https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md](https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md) to add wireless static ip.
 
 ## WebIOPi
 
