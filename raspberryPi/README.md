@@ -8,6 +8,11 @@ Raspberry stuff.
 
 It introduced a wonderful remote access tool for linux like system (MobaXterm), it can replace MTPUTTY with ease.
 
+## VIM mouse right click as copy
+
+[Disable vim automatic visual mode using mouse](http://www.varesano.net/blog/fabio/disable%20vim%20automatic%20visual%20mode%20using%20mouse)
+
+Insert `set mouse-=a` into your ~/.vimrc file (maybe also for the root user).
 
 ## LOGIN via ssh
 
@@ -38,7 +43,7 @@ The default behavior of raspberry system changes A LOT!
 
 ## Some configuration for hardware
 
-
+I2C
 
 ## Static IP
 
