@@ -38,8 +38,6 @@ The default behavior of raspberry system changes A LOT!
 
 ## Some configuration for hardware
 
-
-
 ## Static IP
 
 ```
@@ -65,8 +63,9 @@ iface default inet dhcp
 
 ```
 
-
 The newer version has some specific configuration, which are not so necessary, we can stick to our old knowledge as above.
+
+> NOTE(this is not repeatable): I failed to connect to the wireless network directly after the IP is set, I recovered the `/etc/network/interfaces` and use configuration below to connect to the network first, and then set the static IP makes the trick. So, maybe: connect to wireless (without static IP) -> set static IP -> ~~delete the wireless configuration in `/etc/wpa_supplicant/wpa_supplicant.conf`~~.
 
 Newer one (2017), [https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md](https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md) to add wireless password and ssid.
 
