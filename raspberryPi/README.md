@@ -8,6 +8,10 @@ Raspberry stuff.
 
 It introduced a wonderful remote access tool for linux like system (MobaXterm), it can replace MTPUTTY with ease.
 
+## Save image to/copy from disk 
+
+[制作树苺派SD卡备份镜像——树苺派系统备份与还原指南](http://blog.lxx1.com/1450)
+
 ## VIM mouse right click as copy
 
 [Disable vim automatic visual mode using mouse](http://www.varesano.net/blog/fabio/disable%20vim%20automatic%20visual%20mode%20using%20mouse)
