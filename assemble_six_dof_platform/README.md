@@ -47,11 +47,16 @@
 ![Rasp GPIO](rasp_gpio.jpg)
 ![Rasp GPIO](rasp_gpio2.png)
 
+NOTE:
+如果使用的是 ，需要参见:[RASPBERRY PI Arduino Shield ADD-ON](https://www.itead.cc/wiki/RASPBERRY_PI_Arduino_Shield_ADD-ON) 来连线，即下图：
+
+![arduino/cnc_uno_raspi_pin_out_one_more](../arduino/cnc_uno_raspi_pin_out_one_more.PNG) 右侧橘色框。
+
 **此时可以进行连线测试**，注：此时可以考虑直接 Rasp 5V 电源供电，扩展板使用 12V 电源供电，暂时无需使用 DC 转换模块。
 
 此步是验证上诉各项无误，测试顺序如下：<br>
 1. 连通 Rasp 后，运行 [https://github.com/MiaoDX/platformMovingV2/blob/master/platformMovingTest.cpp](https://github.com/MiaoDX/platformMovingV2/blob/master/platformMovingTest.cpp) 程序（输入 0，测试正方向），观察并记录 X/Z 运动正方向（此方向与连线方式相关，仅记录即可）<br>
-2. 开启 Rasp WebIO（参见 [../raspberryPi/README.md](raspberryPi/README.md)），旋转 X/Z 至**正方向**限位状态，观察是否与上述连线设置（ARPI600扩展板）一致，即按照目前正方向移植限位会导致预计正方向限位 IO 口数值变化（由低到高）。如若不然，可以考虑更换步进电机控制线，由 1234 换为 2134 或 1243，亦可以考虑将限位线进行替换。
+2. 开启 Rasp WebIO（参见 [../raspberryPi/README.md](../raspberryPi/README.md)），旋转 X/Z 至**正方向**限位状态，观察是否与上述连线设置（ARPI600扩展板）一致，即按照目前正方向移植限位会导致预计正方向限位 IO 口数值变化（由低到高）。如若不然，可以考虑更换步进电机控制线，由 1234 换为 2134 或 1243，亦可以考虑将限位线进行替换。
 3. 运行测试程序（输入 1，测试归位操作）
 
 * 切割面包板至合适大小
